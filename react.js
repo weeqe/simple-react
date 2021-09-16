@@ -169,7 +169,7 @@ function reconcileChildren(wipFiber, elements) {
   let index = 0;
   let pervSibling = null;
   let oldFiber = wipFiber.alternate && wipFiber.alternate.child;
-  while (index < elements.length) {
+  while (index < elements.length || oldFiber != null) {
     const element = elements[index];
     let newFiber = null;
 
